@@ -7,21 +7,21 @@ export default class Saved extends Component {
     books: []
   }
 
-  componentDidMount() {
-    this.loadBooks();
-  }
-
   loadBooks = () => API.getBooks()
     .then(response => {
       console.log("Got all the books: ", response);
       this.setState({ books: response.data })
     })
 
+  componentDidMount() {
+    this.loadBooks();
+  }
   render() {
     return (
       <div>
         Saved Book!
         {this.state.books.map(book => {
+
           return <div>{book.title}</div>
         })}
       </div>

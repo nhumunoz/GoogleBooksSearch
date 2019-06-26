@@ -31,7 +31,6 @@ export default class Search extends Component {
       });
   }
 
-
   render() {
     return (
       <div>
@@ -39,7 +38,7 @@ export default class Search extends Component {
           <hr />
           <Input onChange={this.handleInputChange} />
           <hr />
-          <FormBtn onClick={this.handleSearch}>Submit Book</FormBtn>
+          <FormBtn onClick={this.handleSearch}>Search Book</FormBtn>
 
           {(this.state.books.length > 0) ?
             this.state.books.map(book => {
